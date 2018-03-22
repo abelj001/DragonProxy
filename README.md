@@ -1,19 +1,20 @@
-# DragonProxy
+
+# **DragonProxy**
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/CmkxTz2)
 Travis: [![TravisCI](https://travis-ci.org/DragonetMC/DragonProxy.svg?branch=master)](https://travis-ci.org/DragonetMC/DragonProxy)
 CodeMC: [![Build Status](https://ci.codemc.org/buildStatus/icon?job=DragonetMC/DragonProxy)](https://ci.codemc.org/job/DragonetMC/job/DragonProxy/)
 
-A proxy for to allow **Minecraft: Bedrock** clients to connect to **Minecraft: Java Edition** servers.
+
+A proxy to allow **Minecraft: Bedrock** clients to connect to **Minecraft: Java Edition** servers.
+
+![Screenshot](https://github.com/DragonetMC/DragonProxy/raw/master/screenshots/hypixel.png)
 
 ### What is DragonProxy
-DragonProxy is a software placed between a Minecraft Bedrock client and a Java Minecraft server.
+DragonProxy is a Bridge placed between a Minecraft Bedrock client and a Java Minecraft server.
 
-DragonProxy is __NOT a plugin__, __NOT a server__ like Spigot or Bungeecord, it's __NOT a BOT__, __NOT a CHEAT__ (it's sometimes buggy but we are working on this).
-
-__Some servers anticheats trigger some movments cheat, use at your own risks.__
-If you get banned from a server, we do not take responsabilities.
+DragonProxy is __NOT a plugin__, __OR a server__ It sits in the middle and "translates" (still heavy W.I.P but were working hard to improve it!).
 
 ## Features
 - Currently supporting Bedrock 1.2.10 and Java 1.12.2
@@ -25,54 +26,104 @@ If you get banned from a server, we do not take responsabilities.
 - BocksEntities spawn
 - Chests
 
-## Work in progressHoverEpic-patch-1
-see https://github.com/DragonetMC/DragonProxy/issues/132
 
-## Known bugs
- - No creative inventory
- - Movments on stairs/half blocks
- - Some anticheat trigger bad movments
 
-## Won't fix/implements :
- - Older protocol compatibility (including plugins like ViaVersion)
 
-![Screenshot](https://github.com/DragonetMC/DragonProxy/raw/master/screenshots/hypixel.png)
-
-## Download
- - [release](https://github.com/DragonetMC/DragonProxy/releases) : stable builds, low features
+# Download
+ - [release](https://github.com/DragonetMC/DragonProxy/releases) : stable builds, standard features
  - [snapshots](https://ci.codemc.org/job/DragonetMC/job/DragonProxy/lastSuccessfulBuild/artifact/proxy/target/)(take first jar) : developments builds, unstable, latest features
 
 ## Compiling
- - clone from github
- - execute ```mvn package``` in root project dir
+clone from github
 
-## Starting
- - to generate a config file, start with ```java -jar dragonproxy-x.x.x.jar``` (where x.x.x is the version)
- - stop the process with CTRL+C
- - edit [config.yml](https://github.com/DragonetMC/DragonProxy/blob/master/proxy/src/main/resources/config.yml) as needed
- - then start again
+execute `mvn package` in root project dir
 
-## Plugin setup
-DragonProxy plugins are optionnals. Warning : the hybrid auth is only implemented for bungeecord.
+## Setting Up
+Check out our [QuickStart](https://github.com/abelj001/DragonProxy/blob/master/README.md#quickstart) Guide!
 
-The bungeecord plugin is used to auth players in hybrid auth mode.
-
-The bukkit plugin is used to send custom packets to the Bedrock client.
-
-## Windows 10 localhost problem
-If you try to run DragonProxy on the __same computer__ you start Minecraft W10 Edition, you must [enable loopback for Minecraft protocol](http://pmmp.readthedocs.io/en/rtfd/faq/connecting/win10localhostcantconnect.html) first.
 
 ## Libraries used
 * [JRakNet by Whirvis](https://github.com/JRakNet/JRakNet)
 * [MCProtocolLib by Steveice10](https://github.com/Steveice10/MCProtocolLib)
 
-## Plugin developement (DragonProxy plugins)
-A frenchy did a small plugin in a [video](https://www.youtube.com/playlist?list=PL1_LASKNkFJtc2q46yvD35EvraArSrICh)
 
-The plugin API is not made, wait for it !
+## Current joblist 
+https://github.com/DragonetMC/DragonProxy/issues/132
+
+## Known bugs/issues
+ - No creative inventory
+ - Movments on stairs/half blocks
+ - with windows 10 sometimes If you try to run DragonProxy on the same computer you start Minecraft W10 Edition on,you may experience problems, if so you must enable [loopback for Minecraft protocol](http://pmmp.readthedocs.io/en/rtfd/faq/connecting/win10localhostcantconnect.html) .
+ - __Servers with Certain Anticheat Plugins can sometimes register some movements as speedhacks/flying. **USE AT YOUR OWN RISK!**__
+If you get banned from a server, we do not take responsibility!
+
+
+## Won't fix/implements :
+ - Older protocol compatibility (including plugins like ViaVersion)
+
 
 ## Thanks :
 * [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 * [Nukkit](https://github.com/NukkitX/Nukkit)
 * [MINET](https://github.com/NiclasOlofsson/MiNET)
 * [MinecraftCoalition](http://wiki.vg)
+
+# Looking for a Server host?
+[![](https://shockbyte.com/assets/img/logo-2017.png)](https://shockbyte.com/partner/dragonet)
+## Get it from [SHOCKBYTE](https://shockbyte.com/partner/dragonet)!! 
+#### It supports DragonProxy!
+Super powerful servers with affordable price! Decent 👍  
+
+![,](http://www.solidbackgrounds.com/images/2560x1440/2560x1440-white-solid-color-background.jpg)
+
+
+
+
+# QuickStart!
+
+ ## **Win**
+
+ ### **First Setup**
+
+   Create a new folder and drag your copy of DragonProxy Into it, Then create a new text document in the same folder.
+
+   In the Text Document you just created, Add `java -jar dragonproxy-<version>.jar` to it, Replacing `<version>` with your own, Then go ahead and save it as `start.bat` 
+
+   Double Click on start.bat, and let it create the `config` and `metrics` files, Once done you can then type `stop` in the console to close it
+
+ ### **Adding Your server**
+
+   To connect to a server of your choice, Open `config.yml` And navigate to about line 28 
+
+   Change the address in  `remote_server_addr:` to the address of Your desired Java Edition server
+
+   And then `remote_server_port:` to the desired  Java Servers Port
+
+   Save your File and then Double click on `start.bat` If successful You should see `[INFO] The proxy has started!` Pop up!
+    
+   ### **Time to test it out!**    
+Open up your Win10/PE edition of minecraft And navigate to the `Servers` tab And Type `localhost` You should then connect Into a small box, and a GUI will prompt you to login with your Java edition Credentials, Once loged in, You will be transported to the server you stated in the config, All set! 
+
+## **Shockbyte setup**
+Coming soon
+
+
+##  **Making your server visible to the outside world!**
+ To make sure people can connect to your server from outside your local network, You will need to port forward `port:19132 TCP/UDP`on your router, and firewall software, If your new to this You can find router specific Guides [Here](https://portforward.com/router.htm)
+
+
+# Hybrid Bungee Auth
+
+## How it works
+<Hoverepic please explain>
+  
+  ### Download Bungge + Spigot Plugins
+  
+   Head over to [CodeMC](https://ci.codemc.org/job/DragonetMC/job/DragonProxy/) And download 
+  
+  `dragonproxy-plugin-bungee-<version>.jar` and `dragonproxy-plugin-spigot-<version>.jar`
+  
+  Place Each plugin in there coresponding  plugin folders. and start each instance. 
+  
+  Navigate to your dragon proxy config and around line 35 there will be a section called `Server Authentication Modes` Change your mode   to `hybrid` and launch dragon proxy as you would normaly, No More Typing try it out!🍪
+  
