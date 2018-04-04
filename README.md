@@ -39,7 +39,7 @@ clone from github
 execute `mvn package` in root project dir
 
 ## Setting Up
-Check out our [QuickStart](https://github.com/abelj001/DragonProxy/blob/master/README.md#quickstart) Guide!
+Check out our [QuickStart](https://github.com/abelj001/DragonProxy/blob/master/README.md#quick-start) Guide!
 
 
 ## Libraries used
