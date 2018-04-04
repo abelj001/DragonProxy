@@ -10,6 +10,7 @@ Code-MC: [![Build Status](https://ci.codemc.org/buildStatus/icon?job=DragonetMC/
 A proxy to allow **Minecraft: Bedrock** clients to connect to **Minecraft: Java Edition** servers.
 
 ![Screenshot](https://github.com/DragonetMC/DragonProxy/raw/master/screenshots/hypixel.png)
+ <sup> <sub>connected to hypixel via dragon-proxy!</sub> </sup>
 
 ### What is Dragon-Proxy
 DragonProxy is a Bridge placed between a Minecraft Bedrock client and a Java Minecraft server.
